@@ -40,7 +40,6 @@ class MoviesController < ApplicationController
     else
       @movies = Movie.order(@field).where(rating: @ratings.keys)
     end
-    session.clear
   end
 
   def new
